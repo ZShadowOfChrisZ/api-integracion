@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, re_path, include  # Asegúrate de importar include
 from usuario import views as ViewUsuario
 from carro import views as ViewCarro
+from pago import views as ViewPago
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     re_path('api/acceder', ViewUsuario.inicio),
     re_path('api/agregar-carro', ViewCarro.agregarProducto),
     re_path('api/mostrar-carro', ViewCarro.mostrarProducto),
+    re_path('api/pagar-carro', ViewPago.pagarCarro),
 ]
